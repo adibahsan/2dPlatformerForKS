@@ -29,6 +29,11 @@ public class PlayerController2d : MonoBehaviour
 		}
 
 		else animator.SetBool("isJumping", true);
+
+		if (Input.GetButton("Fire1"))
+		{
+			animator.Play("shoot");
+		}
 	}
 
 	 void FixedUpdate()
@@ -67,6 +72,7 @@ public class PlayerController2d : MonoBehaviour
 			rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, 3.5f);
 			//animator.Play("Jump");
 		}
+		
 
 	}
 
